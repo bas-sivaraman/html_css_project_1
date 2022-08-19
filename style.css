@@ -1,0 +1,225 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 1150px;
+  margin: 0 auto;
+}
+
+.container {
+  display: grid;
+  row-gap: 50px;
+}
+
+/* ----------------------- */
+/* ----NAVBAR SECTION----- */
+/* ----------------------- */
+
+section[aria-label="navbar"] {
+  margin-top: 30px;
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* --- NAVBAR LOGO --- */
+
+img[alt="brand-logo"] {
+  width: 150px;
+  height: 50px;
+}
+
+/* --- NAVBAR LIST MENU --- */
+
+.list,
+.list:visited {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  align-items: center;
+  justify-items: center;
+  gap: 20px;
+  width: 560px;
+  height: 34px;
+  list-style: none;
+  font-size: 16px;
+  font-family: "Orbitron", sans-serif;
+  font-weight: 700;
+}
+
+.list-item:first-child {
+  display: inline-block;
+  position: relative;
+  font-size: 20px;
+}
+
+.list-item:first-child::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  bottom: 0px;
+  left: 25%;
+  width: 50%;
+  height: 2px;
+  background-color: #000;
+}
+
+.list-item:nth-child(3) {
+  grid-area: 1/2;
+}
+
+/* --- NAVBAR SEARCH BUTTON --- */
+
+.button-group {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.search-icon svg {
+  width: 20px;
+  height: auto;
+  position: relative;
+  top: 2px;
+}
+
+.nav-button {
+  padding: 5px 30px;
+  border-radius: 10px;
+  font-size: 16px;
+  color: #565656cc;
+}
+
+/* ----------------------- */
+/* ----BANNER SECTION----- */
+/* ----------------------- */
+
+.hero-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  column-gap: 160px;
+  position: absolute;
+}
+
+/* --- HERO IMAGE --- */
+
+img[alt="person-hero-image"] {
+  position: absolute;
+  top: 0px;
+  left: 0;
+  width: 370px;
+}
+
+/* --- SQUARE GRID --- */
+
+img[alt="square-pattern"] {
+  position: absolute;
+  top: 190px;
+  left: 100px;
+  width: 330px;
+}
+
+/* --- STAR --- */
+
+img[alt="star-pattern"] {
+  position: absolute;
+  right: 600px;
+  bottom: -110px;
+  width: 42px;
+}
+
+.star::after {
+  content: url(./assets/start.png);
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  width: 52px;
+}
+
+/* --- GLOBE --- */
+
+img[alt="globe-pattern"] {
+  position: absolute;
+  top: -20px;
+  right: 450px;
+  width: 60px;
+}
+
+/* --- RIGHT SECTION --- */
+
+.hero-container-right {
+  grid-area: 1/2;
+  grid-row: 1/-1;
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+  row-gap: 30px;
+  align-items: center;
+  justify-items: center;
+  position: relative;
+  top: 100px;
+}
+
+.hero-heading {
+  text-align: center;
+  font-family: "Orbitron", sans-serif;
+  font-size: 50px;
+  position: relative;
+  top: -10px;
+}
+
+.hero-description {
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 14px;
+  width: 520px;
+  color: #565656cc;
+}
+
+.button-email {
+  padding: 2px 16px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-family: "Orbitron", sans-serif;
+  color: #565656;
+}
+
+.button-join {
+  font-size: 16px;
+  padding: 2px 4px;
+  color: #fff;
+  background-color: #000;
+  font-family: "Orbitron", sans-serif;
+  border-radius: 8px;
+  margin-left: 10px;
+}
+
+.hero-container-right > div:last-child {
+  display: grid;
+  justify-items: center;
+  row-gap: 15px;
+  position: relative;
+  top: 20px;
+}
+
+.contact-heading {
+  font-size: 18px;
+  color: #565656cc;
+  font-family: sans-serif;
+  text-transform: capitalize;
+}
+
+.icons {
+  display: flex;
+  gap: 15px;
+}
+
+.icons span img {
+  width: 34px;
+  height: 34px;
+}
